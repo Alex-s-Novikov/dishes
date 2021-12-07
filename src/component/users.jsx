@@ -17,7 +17,7 @@ const handleDelete = (userId) =>{
 const renderPhrase = (id) => {
    return id.map(user =>      <tr>
     <th scope="row">{user.name}</th>
-    <td><span>{user.qualities.map(quality => <nobr key={quality._id} className={`badge m-1 bg-${quality.color}`}>{quality.name}</nobr>)}</span></td>
+    <td><span>{user.qualities.map(quality => <span key={quality._id} className={`badge m-1 bg-${quality.color}`}>{quality.name}</span>)}</span></td>
     <td>{user.profession.name}</td>
   <td>{user.completedMeetings}</td>
  <td>{user.rate}/5</td>
